@@ -123,8 +123,39 @@ function Back(r,t,n){
 
 
 
+// mat=[
+// [7,,,,4,,,,],
+// [,3,,6,,,7,4,],
+// [,,,7,,8,9,,],
+// [5,,4,,,,,1,],
+// [,,1,,8,,2,,],
+// [,7,,,,,8,,9],
+// [,,3,1,,2,,,],
+// [,4,5,,,6,,2,],
+// [,,,,9,,,,3]
+// ]
+// mat 
 
-
+function puts(mat){
+var r = 1;
+var t = 1;
+var n = 1;
+var z;
+   
+    debugger
+  for(var i=0;i<9;i++){
+    for(var j=0;j<9;j++){
+      var x = pointer(r,t,n)[0]
+      if(mat[i][j]&&mat[i][j]>0){x.innerHTML=mat[i][j]}
+      
+      z=Next(r,t,n);
+      r = z.slice(0,1)
+      t = z.slice(1,2)
+      n = z.slice(2,3)
+    }
+  }
+   
+}
 
 
 function ffff(){
@@ -208,6 +239,14 @@ function cons(){
 
 
 
+function play(){
+  debugger
+
+  var mat =document.getElementById("input").value
+  console.log("lll"+mat)
+  puts(mat);
+  ffff();
+}
 
 
 
