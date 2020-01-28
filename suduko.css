@@ -1,0 +1,19 @@
+td{
+   border:1px  solid; 
+   width: 30px;
+   align:"center";
+   background-color: white}
+table {
+  border-collapse: collapse;
+}
+#mainTable{
+	float: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15em
+}
+
+td:empty:after{
+  content: "\00a0";
+}
+
